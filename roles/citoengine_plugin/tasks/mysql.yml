@@ -29,3 +29,4 @@
     password: "{{ citoengine_pass }}"
     priv: 'cito_plugin_server.*:ALL,GRANT'
     state: present
+    append_privs: yes

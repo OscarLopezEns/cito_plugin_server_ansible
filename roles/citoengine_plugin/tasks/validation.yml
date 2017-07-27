@@ -7,6 +7,11 @@
     src: cito-plugin-server.sh.j2
     dest: /opt/cito_plugin_server/bin/cito-plugin-server.sh
 
+- name: Modify cito-plugin-server.conf to run as root
+  template:
+    src: cito-plugin-server.conf.j2
+    dest: /opt/cito_plugin_server/bin/upstart/cito-plugin-server.conf
+
 - name: Fix path issue on /opt/cito_plugin_server/bin/upstart/configure-upstart.sh
   template:
     src: configure-upstart.sh.j2
